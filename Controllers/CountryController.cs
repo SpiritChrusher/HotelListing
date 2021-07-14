@@ -49,7 +49,7 @@ namespace HotelListing.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCountry(int id)
         {
-            try
+            try 
             {
                 var country = await _unitOfWork.Countries.Get(x => x.Id == id, new List<string> { "Hotels"});
                 var result = _mapper.Map<CountryDTO>(country);
