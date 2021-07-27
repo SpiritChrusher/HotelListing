@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelListing.Configurations.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -24,5 +25,6 @@ namespace HotelListing.Models
 
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
+        public ICollection<string> Roles { get; set; }
     }
 }
